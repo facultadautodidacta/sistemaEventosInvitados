@@ -39,7 +39,7 @@
             <?php echo $_SESSION['usuario']; ?>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="servidor/login/logout.php">Salir del sistema</a></li>
+            <li><a class="dropdown-item" href="../servidor/login/logout.php">Salir del sistema</a></li>
           </ul>
         </li>
       </ul>

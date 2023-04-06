@@ -3,7 +3,7 @@
         public $servidor = 'localhost';
         public $usuario = 'root';
         public $password = 'autodidacta';
-        public $database = 'loginpoo2023';
+        public $database = 'sei';
         public $port = 3306;
 
         public function conectar() {
