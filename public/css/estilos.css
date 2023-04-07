@@ -1,0 +1,11 @@
+.btn-purple {
+    background-color: #8A2BE2; /* Color morado en formato hexadecimal */
+    border-color: #8A2BE2; /* Color del borde en formato hexadecimal */
+    color: #fff; /* Color del texto en blanco */
+  }
+  
+  .btn-purple:hover {
+    background-color: #9400D3; /* Color morado más oscuro cuando el botón se encuentra en hover */
+    border-color: #9400D3; /* Color del borde en formato hexadecimal */
+    color: #fff; /* Color del texto en blanco */
+  }
