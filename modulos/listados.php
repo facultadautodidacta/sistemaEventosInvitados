@@ -1,0 +1,22 @@
+<?php 
+  include "header.php";
+  include "menu.php"; 
+?>
+
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card mt-3">
+        <div class="card-body">
+          <h2>Listados de invitados</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php 
+  include "footer.php";
+?>
+    
