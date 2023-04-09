@@ -10,7 +10,9 @@
       <div class="card mt-3">
         <div class="card-body">
           <h2>Listado de eventos</h2>
-          <a href="" class="btn btn-purple">Evento nuevo</a>
+          <span class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_evento">
+            Evento nuevo
+          </span>
           <hr>
           <div id="tablaEventos"></div>
         </div>
@@ -19,6 +21,8 @@
   </div>
 </div>
 <?php 
+  include "eventos/modal_agregar.php";
+  include "eventos/modal_editar.php";
   include "footer.php";
 ?>
 

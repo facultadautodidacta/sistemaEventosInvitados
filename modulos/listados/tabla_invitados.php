@@ -1,9 +1,8 @@
-<table class="table table-sm table-hover" id="tabla_eventos_load">
+<table class="table table-sm table-hover" id="tabla_invitados_load">
     <thead>
         <tr>
-            <th>Nombre</th>
-            <th>Hora inicio</th>
-            <th>Hora fin</th>
+            <th>Invitado</th>
+            <th>Evento</th>
             <th>Fecha</th>
             <th>Editar</th>
             <th>Eliminar</th>
@@ -14,15 +13,14 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
             <td>
-                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_evento">
-                    <i class="fa-solid fa-pen-to-square"></i>
+                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_invitado">
+                    <i class="fa-solid fa-user-pen"></i>
                 </span>
             </td>
             <td>
                 <span class="btn btn-danger">
-                    <i class="fa-solid fa-calendar-xmark"></i>
+                    <i class="fa-solid fa-user-xmark"></i>
                 </span>
             </td>
         </tr>
@@ -31,6 +29,6 @@
 
 <script>
     $(document).ready(function(){
-        $('#tabla_eventos_load').DataTable();
+        $('#tabla_invitados_load').DataTable();
     });
 </script>
