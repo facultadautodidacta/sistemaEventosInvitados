@@ -39,3 +39,16 @@ ADD CONSTRAINT `fkusuarios`
   REFERENCES `sei`.`t_usuarios` (`id_usuario`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+
+-- este es el campo que faltaba
+
+ALTER TABLE `sei`.`t_eventos` 
+ADD COLUMN `evento` VARCHAR(245) NULL AFTER `id_usuario`;
+
+
+-- este es el insert para pruebas
+
+INSERT INTO t_eventos (id_usuario,evento, hora_inicio, hora_fin, fecha) VALUES 
+(1,'Evento 1', '2023-04-11 10:00:00', '2023-04-11 12:00:00' , '2023-04-11' ),
+  (1,'Evento 2', '2023-04-12 14:00:00', '2023-04-12 16:00:00', '2023-04-12'),
+  (1,'Evento 3', '2023-04-13 09:00:00', '2023-04-13 11:00:00', '2023-04-13');
