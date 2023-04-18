@@ -9,7 +9,7 @@
     <div class="col">
       <div class="card mt-3">
         <div class="card-body">
-          <h2>Listados de invitados</h2>
+          <h2>Invitados</h2>
           <span class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_invitado">
             Listado nuevo
           </span>

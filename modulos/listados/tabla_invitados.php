@@ -1,3 +1,10 @@
+
+<?php 
+    include "../../clases/Invitados.php";
+    $Invitados = new Invitados();
+    $items = $Invitados->mostrarInvitados();
+?>
+
 <table class="table table-sm table-hover" id="tabla_invitados_load">
     <thead>
         <tr>
@@ -9,10 +16,11 @@
         </tr>
     </thead>
     <tbody>
+        <?php foreach ($items as $key):?>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><?php echo $key['nombre'] ?></td>
+            <td><?php echo $key['nombreEvento'] ?></td>
+            <td><?php echo $key['fechaEvento'] ?></td>
             <td>
                 <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_invitado">
                     <i class="fa-solid fa-user-pen"></i>
@@ -24,6 +32,7 @@
                 </span>
             </td>
         </tr>
+        <?php endforeach; ?>
     </tbody>
 </table>
 
