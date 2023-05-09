@@ -11,6 +11,7 @@
       <div class="card mt-3">
         <div class="card-body">
           <h2>Este es el inicio</h2>
+          
         </div>
       </div>
     </div>
