@@ -9,6 +9,7 @@
     <thead>
         <tr>
             <th>Invitado</th>
+            <th>Email</th>
             <th>Evento</th>
             <th>Fecha</th>
             <th>Editar</th>
@@ -19,6 +20,7 @@
         <?php foreach ($items as $key):?>
         <tr>
             <td><?php echo $key['nombre'] ?></td>
+            <td><?php echo $key['email'] ?></td>
             <td><?php echo $key['nombreEvento'] ?></td>
             <td><?php echo $key['fechaEvento'] ?></td>
             <td>
