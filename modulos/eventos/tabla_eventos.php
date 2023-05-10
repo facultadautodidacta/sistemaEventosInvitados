@@ -28,7 +28,7 @@
                 </span>
             </td>
             <td>
-                <span class="btn btn-danger">
+                <span class="btn btn-danger" onclick="eliminarEvento('<?php echo $key['id_evento'] ?>')">
                     <i class="fa-solid fa-calendar-xmark"></i>
                 </span>
             </td>

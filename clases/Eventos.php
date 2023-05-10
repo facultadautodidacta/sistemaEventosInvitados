@@ -25,4 +25,12 @@
                                         $data['fecha']);
             return $query->execute();
         }
+
+        public function eliminarEvento($id_evento) {
+            $conexion = Conexion::conectar();
+            $sql = "DELETE FROM t_eventos WHERE id_evento = ?";
+            $query = $conexion->prepare($sql);
+            $query->bind_param('i', $id_evento);
+            return $query->execute();
+        }
     }
