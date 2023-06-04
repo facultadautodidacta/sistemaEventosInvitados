@@ -9,6 +9,20 @@
             return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
         }
 
+        public function editarEvento($id_evento) {
+            $conexion = Conexion::conectar();
+            $sql = "SELECT id_evento,
+                            evento,
+                            DATE_FORMAT(hora_inicio, '%H:%i:%s') AS hora_inicio, 
+                            DATE_FORMAT(hora_fin, '%H:%i:%s') AS hora_fin,
+                            fecha
+                    FROM 
+                        t_eventos 
+                    WHERE id_evento = '$id_evento'";
+            $respuesta = mysqli_query($conexion, $sql);
+            return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
+        }
+
         public function agregar($data) {
             $conexion = Conexion::conectar();
             $sql = "INSERT INTO t_eventos (id_usuario,
