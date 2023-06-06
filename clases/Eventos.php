@@ -47,4 +47,22 @@
             $query->bind_param('i', $id_evento);
             return $query->execute();
         }
+
+        public function actualizarEvento($data) {
+            $conexion = Conexion::conectar();
+            $sql = "UPDATE t_eventos SET id_usuario = ?,
+                                        evento = ?,
+                                        hora_inicio = ?,
+                                        hora_fin = ?, 
+                                        fecha = ? 
+                    WHERE id_evento = ?";
+            $query = $conexion->prepare($sql);
+            $query->bind_param('issssi', $data['id_usuario'], 
+                                            $data['evento'],
+                                            $data['hora_inicio'],
+                                            $data['hora_fin'],
+                                            $data['fecha'],
+                                            $data['id_evento']);
+            return $query->execute();
+        }
     }

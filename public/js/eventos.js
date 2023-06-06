@@ -82,3 +82,30 @@ function editarEvento(id_evento){
         }
     });
 }
+
+function actualizarEvento() {
+    $.ajax({
+        type: "POST",
+        data: $('#frmEditarEvento').serialize(),
+        url: "../servidor/eventos/actualizar.php",
+        success : function(respuesta) {
+            if (respuesta == 1) {
+                $('#tablaEventos').load('eventos/tabla_eventos.php');
+                Swal.fire({
+                    title: 'Exito!',
+                    text: 'Actualizado',
+                    icon: 'success'
+                })
+            } else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Fallo con ' + respuesta,
+                    icon: 'error'
+                })
+            }
+        }
+    });
+
+    return false;
+
+}

@@ -1,4 +1,4 @@
-<form id="frmEditarEvento" onsubmit="actualizarEvento()">
+<form id="frmEditarEvento" onsubmit="return actualizarEvento()">
   <!-- Modal -->
 <div class="modal fade" id="modal_editar_evento" tabindex="-1" aria-labelledby="modal_editar_eventoLabel" aria-hidden="true">
   <div class="modal-dialog">
