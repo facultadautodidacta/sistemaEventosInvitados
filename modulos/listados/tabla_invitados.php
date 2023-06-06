@@ -24,7 +24,9 @@
             <td><?php echo $key['nombreEvento'] ?></td>
             <td><?php echo $key['fechaEvento'] ?></td>
             <td>
-                <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_invitado">
+                <span class="btn btn-warning" data-bs-toggle="modal" 
+                data-bs-target="#modal_editar_invitado" 
+                onclick="editarInvitado('<?php echo $key['idInvitado'] ?>')">
                     <i class="fa-solid fa-user-pen"></i>
                 </span>
             </td>

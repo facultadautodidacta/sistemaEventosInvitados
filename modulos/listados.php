@@ -1,4 +1,8 @@
 <?php 
+
+  include "../clases/Invitados.php";
+  $Invitados = new Invitados();
+  
   include "header.php";
   include "menu.php"; 
 ?>
@@ -11,7 +15,7 @@
         <div class="card-body">
           <h2>Invitados</h2>
           <span class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_invitado">
-            Listado invitado
+            Nuevo invitado
           </span>
           <hr>
           <div id="tablaInvitados"></div>
