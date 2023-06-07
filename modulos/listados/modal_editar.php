@@ -2,7 +2,7 @@
   $selecte = $Invitados->selectEventosEditar();
 ?>
 
-<form id="frmEditarInvitado" >
+<form id="frmEditarInvitado" onsubmit="return actualizarInvitado()">
   <!-- Modal -->
   <div class="modal fade" id="modal_editar_invitado" tabindex="-1" aria-labelledby="modal_editar_invitadoLabel" aria-hidden="true">
     <div class="modal-dialog">

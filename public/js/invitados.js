@@ -81,3 +81,31 @@ function editarInvitado(id_invitado){
         }
     });
 }
+
+
+function actualizarInvitado() {
+    $.ajax({
+        type:"POST",
+        data:$('#frmEditarInvitado').serialize(),
+        url:"../servidor/invitados/actualizar.php",
+        success:function(respuesta) {
+            
+            if (respuesta == 1) {
+                $('#tablaInvitados').load('listados/tabla_invitados.php');
+                
+                Swal.fire({
+                    title: 'Exito!',
+                    text: 'Actualizado',
+                    icon: 'success'
+                })
+            } else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Fallo con ' + respuesta,
+                    icon: 'error'
+                })
+            }
+        }
+    });
+    return false;
+}

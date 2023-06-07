@@ -71,4 +71,18 @@
             $respuesta = mysqli_query($conexion, $sql);
             return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
         }
+
+        public function actualizarInvitado($data){
+            $conexion = Conexion::conectar();
+            $sql = "UPDATE t_invitados SET id_evento = ?,
+                                            nombre_invitado = ?,
+                                            email = ? 
+                    WHERE id_invitado = ?";
+            $query = $conexion->prepare($sql);
+            $query->bind_param('issi', $data['id_evento'],
+                                        $data['nombre_invitado'],
+                                        $data['email'],
+                                        $data['id_invitado']);
+            return $query->execute();
+        }
     }
