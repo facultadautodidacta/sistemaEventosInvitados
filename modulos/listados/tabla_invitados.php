@@ -43,6 +43,10 @@
 
 <script>
     $(document).ready(function(){
-        $('#tabla_invitados_load').DataTable();
+        $('#tabla_invitados_load').DataTable({
+            "language": {
+                "url": "../public/librerias/datatables/Spanish.json"
+            }
+        });
     });
 </script>

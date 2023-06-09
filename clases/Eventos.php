@@ -4,7 +4,13 @@
     class Eventos extends Conexion {
         public function mostrarEventos() {
             $conexion = Conexion::conectar();
-            $sql = "SELECT * FROM t_eventos";
+            $sql = "SELECT id_evento,
+                            evento,
+                            DATE_FORMAT(hora_inicio, '%H:%i:%s') AS hora_inicio, 
+                            DATE_FORMAT(hora_fin, '%H:%i:%s') AS hora_fin,
+                            DATE_FORMAT(fecha, '%d-%m-%Y') AS fecha
+                    FROM 
+                        t_eventos";
             $respuesta = mysqli_query($conexion, $sql);
             return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
         }

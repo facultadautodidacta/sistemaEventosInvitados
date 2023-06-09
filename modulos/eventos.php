@@ -11,7 +11,7 @@
         <div class="card-body">
           <h2>Eventos</h2>
           <span class="btn btn-purple" data-bs-toggle="modal" data-bs-target="#modal_agregar_evento">
-            Nuevo evento
+          <i class="fa-regular fa-calendar-plus"></i> Nuevo evento
           </span>
           <hr>
           <div id="tablaEventos"></div>

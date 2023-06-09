@@ -40,6 +40,10 @@
 
 <script>
     $(document).ready(function(){
-        $('#tabla_eventos_load').DataTable();
+        $('#tabla_eventos_load').DataTable({
+            "language": {
+                "url": "../public/librerias/datatables/Spanish.json"
+            }
+        });
     });
 </script>
