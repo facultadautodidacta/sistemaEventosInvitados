@@ -11,6 +11,7 @@
             <th>Hora inicio</th>
             <th>Hora fin</th>
             <th>Fecha</th>
+            <th>Imprimir</th>
             <th>Editar</th>
             <th>Eliminar</th>
         </tr>
@@ -22,6 +23,12 @@
             <td><?php echo $key['hora_inicio'] ?></td>
             <td><?php echo $key['hora_fin'] ?></td>
             <td><?php echo $key['fecha'] ?></td>
+            <td>
+                <a href="listado_invitados.php?id_evento=<?php echo $key['id_evento'] ?>" 
+                class="btn btn-info">
+                    <i class="fa-solid fa-print"></i>
+                </a>
+            </td>
             <td>
                 <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_evento" 
                     onclick="editarEvento('<?php echo $key['id_evento'] ?>')">

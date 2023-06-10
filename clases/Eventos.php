@@ -72,4 +72,12 @@
                                             $data['id_evento']);
             return $query->execute();
         }
+
+        public function mostrarInvitadosEvento($id_evento) {
+            $conexion = Conexion::conectar();
+            $sql = "SELECT * FROM v_invitados 
+                    WHERE idEvento = '$id_evento'";
+            $respuesta = mysqli_query($conexion, $sql);
+            return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
+        }
     }
