@@ -24,8 +24,9 @@
             <td><?php echo $key['hora_fin'] ?></td>
             <td><?php echo $key['fecha'] ?></td>
             <td>
-                <a href="listado_invitados.php?id_evento=<?php echo $key['id_evento'] ?>" 
-                class="btn btn-info">
+                <a href="../servidor/impresion_evento/imprimir_evento.php?id_evento=<?php echo $key['id_evento'] ?>" 
+                class="btn btn-info" 
+                target="_blank">
                     <i class="fa-solid fa-print"></i>
                 </a>
             </td>
