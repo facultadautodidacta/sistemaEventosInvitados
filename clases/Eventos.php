@@ -80,4 +80,17 @@
             $respuesta = mysqli_query($conexion, $sql);
             return mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
         }
+
+        public function hayInvitados($id_evento) {
+            $conexion = Conexion::conectar();
+            $sql = "SELECT 
+                        COUNT(*) as total
+                    FROM
+                        t_invitados
+                    WHERE
+                        id_evento = '$id_evento'";
+            $respuesta = mysqli_query($conexion, $sql);
+            
+            return mysqli_fetch_array($respuesta)['total'];
+        }
     }

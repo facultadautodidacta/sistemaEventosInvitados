@@ -23,13 +23,24 @@
             <td><?php echo $key['hora_inicio'] ?></td>
             <td><?php echo $key['hora_fin'] ?></td>
             <td><?php echo $key['fecha'] ?></td>
+
+            
             <td>
+            <?php 
+                $invitados = $Eventos->hayInvitados($key['id_evento']);
+                if ($invitados > 0) {
+            ?>
                 <a href="../servidor/impresion_evento/imprimir_evento.php?id_evento=<?php echo $key['id_evento'] ?>" 
-                class="btn btn-info" 
-                target="_blank">
-                    <i class="fa-solid fa-print"></i>
+                    class="btn btn-info" 
+                    target="_blank">
+                     <i class="fa-solid fa-print"></i> 
+                     <span class="badge bg-secondary"><?php echo $invitados; ?></span>
                 </a>
+            <?php
+                }
+            ?>
             </td>
+            
             <td>
                 <span class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal_editar_evento" 
                     onclick="editarEvento('<?php echo $key['id_evento'] ?>')">
