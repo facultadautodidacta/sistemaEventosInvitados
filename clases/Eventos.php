@@ -93,4 +93,21 @@
             
             return mysqli_fetch_array($respuesta)['total'];
         }
+
+        public function fullCalendar($id_usuario) {
+            $conexion = Conexion::conectar();
+            $sql = "SELECT 
+                        id_evento AS id,
+                        evento AS title,
+                        hora_inicio AS start,
+                        hora_fin AS end
+                    FROM
+                        t_eventos 
+                    WHERE id_usuario = '$id_usuario'";
+
+            $respuesta = mysqli_query($conexion, $sql);
+            $eventos = mysqli_fetch_all($respuesta, MYSQLI_ASSOC);
+
+            return json_encode($eventos);
+        }
     }
