@@ -1,7 +1,13 @@
 <?php session_start();
+
+    $fecha = "";
+    if (isset($_GET['fecha'])) {
+        $fecha = $_GET['fecha'];
+    }
+
     include "../../clases/Eventos.php";
     $Eventos = new Eventos();
-    $items = $Eventos->mostrarEventos($_SESSION['id_usuario']);
+    $items = $Eventos->mostrarEventos($_SESSION['id_usuario'], $fecha);
 ?>
 
 <table class="table table-sm table-hover" id="tabla_eventos_load">
