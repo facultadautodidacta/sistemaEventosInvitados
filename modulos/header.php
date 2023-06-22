@@ -18,6 +18,6 @@
     <link rel="stylesheet" href="../public/librerias/fontawesome-free-6.4.0-web/css/all.css">
     <link rel="stylesheet" href="../public/librerias/datatables/datatables.css">
     
-    <title>SIE </title>
+    <title>SEI </title>
   </head>
   <body style="background-color: #f8f9fa;">

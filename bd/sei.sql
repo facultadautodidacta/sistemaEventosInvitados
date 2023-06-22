@@ -7,42 +7,42 @@ CREATE TABLE t_usuarios (
   `password` VARCHAR(245) NOT NULL,
   PRIMARY KEY (`id_usuario`));
 
-CREATE TABLE `sei`.`t_eventos` (
+CREATE TABLE `t_eventos` (
   `id_evento` INT NOT NULL AUTO_INCREMENT,
   `hora_inicio` DATETIME NULL,
   `hora_fin` DATETIME NULL,
   `fecha` DATE NULL,
 PRIMARY KEY (`id_evento`));
-CREATE TABLE `sei`.`t_invitados` (
+CREATE TABLE `t_invitados` (
   `id_invitado` INT NOT NULL AUTO_INCREMENT,
   `id_evento` INT NULL,
   `nombre_invitado` VARCHAR(245) NULL,
   `email` VARCHAR(245) NULL,
   PRIMARY KEY (`id_invitado`));
 
-ALTER TABLE `sei`.`t_invitados` 
+ALTER TABLE `t_invitados` 
 ADD INDEX `fkeventos_idx` (`id_evento` ASC);
 ;
-ALTER TABLE `sei`.`t_invitados` 
+ALTER TABLE `t_invitados` 
 ADD CONSTRAINT `fkeventos`
   FOREIGN KEY (`id_evento`)
-  REFERENCES `sei`.`t_eventos` (`id_evento`)
+  REFERENCES `t_eventos` (`id_evento`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
-ALTER TABLE `sei`.`t_eventos` 
+ALTER TABLE `t_eventos` 
 ADD COLUMN `id_usuario` INT NULL AFTER `id_evento`,
 ADD INDEX `fkusuarios_idx` (`id_usuario` ASC);
 ;
-ALTER TABLE `sei`.`t_eventos` 
+ALTER TABLE `t_eventos` 
 ADD CONSTRAINT `fkusuarios`
   FOREIGN KEY (`id_usuario`)
-  REFERENCES `sei`.`t_usuarios` (`id_usuario`)
+  REFERENCES `t_usuarios` (`id_usuario`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
 
 -- este es el campo que faltaba
 
-ALTER TABLE `sei`.`t_eventos` 
+ALTER TABLE `t_eventos` 
 ADD COLUMN `evento` VARCHAR(245) NULL AFTER `id_usuario`;
 
 
